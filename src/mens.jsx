@@ -3,7 +3,7 @@ import NavBar from './navBar';
 import { Outlet } from 'react-router-dom'
 
 
-export default function Womens(){
+export default function Mens(){
 
     const [items, setItems] = useState([]);
     const [error, setError] = useState(null);
@@ -23,9 +23,9 @@ export default function Womens(){
                 //filter!!! 
                .then((data) => {
                 const specificItems = data.filter(item => 
-                    (item.id === 18) ||
-                    (item.id === 19) ||
-                    (item.id === 20)
+                    (item.id === 2) ||
+                    (item.id === 3) ||
+                    (item.id === 4)
                 );
 
           setItems(specificItems)
@@ -39,27 +39,27 @@ export default function Womens(){
             if (loading) return <p>loading...</p>
             if (error) return <p>a network error was encountered</p>;
 
-    return (
-        <>
-        <NavBar />
-        <h2 className="shirt-collection">The Shirt Collection</h2>
-        <div className="container">
-       {items.map((item) => item && (
-        <div className="shirts" key={item.id}>
-        <img src={item.image} alt={item.title} className="item" />
-        <div className="description">
-        <p>{item.title}</p>
-        <p>${item.price}</p>  
-         <button>add to bag</button>   
+            return (
+                <>
+                <NavBar />
+                <h2 className="shirt-collection">The Shirt Collection</h2>
+                <div className="container">
+               {items.map((item) => item && (
+                <div className="shirts" key={item.id}>
+                <img src={item.image} alt={item.title} className="item" />
+                <div className="description">
+                <p>{item.title}</p>
+                <p>${item.price}</p>  
+                 <button>add to bag</button>   
+                
+                </div>
+               
+                </div>
+               
+               ))}
+                <Outlet />
+                </div>
+                </>
+            )
         
-        </div>
-       
-        </div>
-       
-       ))}
-        <Outlet />
-        </div>
-        </>
-    )
-
-}
+        }
