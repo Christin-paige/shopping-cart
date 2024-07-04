@@ -1,42 +1,45 @@
-
 .hero {
-  width:100%;
+  width: 100%;
   height: auto;
-  
- 
 }
 
 .header {
   margin-right: 50px;
   width: 200px;
   height: 200px;
- 
 }
 
 .nav-container {
-  display: flex;
-  justify-content:center;
-  align-items: center;
- 
-}
-
-.nav-links{
+  width: 100%;
+  float: left;
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  background-color: #ede5d6;
+  margin: 0 0 1em 0;
+	margin-right: 50px;
+
 }
 
-
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nav-link {
+  color: #0076a4;
+}
+.nav-link:hover {
+  color: #fac495;
+}
 
 .rounded-circle {
   width: 3rem;
   height: 3rem;
   position: relative;
- margin-right: 20px;
-  
+  margin-right: 20px;
 }
-svg{
+svg {
   display: flex;
   padding-right: 3px;
 }
@@ -45,7 +48,7 @@ svg{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  background-color: #0076a4;
   color: white;
   width: 1.5rem;
   height: 1.5rem;
@@ -54,25 +57,27 @@ svg{
   right: 0;
   transform: translate(40%, 40%);
   border-radius: 50%;
-
+}
+.rounded-circle {
+  background-color: #fac495;
+}
+.rounded-circle:hover {
+  background-color: #e6ad81;
 }
 
-.shoppingBag{
-  margin-right: 50px;
+.cart-container {
+  display: flex;
 }
 
-.container{
+.container {
   display: flex;
   justify-content: space-between;
   padding-top: 20px;
-  
 }
-
 
 .item {
   width: 200px;
   margin-left: 50px;
-
 }
 
 .description {
@@ -80,29 +85,26 @@ svg{
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
 }
-.topPicks{
+.topPicks {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
-.content-images{
+.content-images {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
- 
 }
 
-.woman-image{
+.woman-image {
   width: 500px;
 }
-.jewelery-image{
+.jewelery-image {
   width: 300px;
 }
-.man-image{
+.man-image {
   width: 500px;
 }
 .footer {
@@ -112,15 +114,17 @@ svg{
   align-items: center;
   margin-left: 200px;
 
-  border-top:double;
+  border-top: double;
   margin: 20px 200px;
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #59708A;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  color: #59708a;
 }
 
 h6 {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  color: #59708A;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  color: #59708a;
   margin-left: 50px;
   padding: 20px;
 }
@@ -128,25 +132,62 @@ h6 {
 .shirts {
   display: flex;
   flex-direction: column;
-  border-style: groove; 
-  border-width: 5px;
-  margin: 20px;
-  padding: 10px;
+  justify-content: space-around;
 }
-.shirt-collection {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-family:fantasy;
-  padding-top: 20px;
+h2 {
+  font-family: fantasy;
 }
-.womens{
+.womens {
   text-decoration: none;
   color: black;
 }
 
-.shoppingBag{
+.clear-cart-button {
   display: flex;
-  flex-direction: column;
+}
+.grid-items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-item {
+  width: 200px;
+  padding: 20px;
+}
+
+.buttons {
+  padding-top: 100px;
+}
+
+.button {
+  margin: 10px;
+  border-color: #59708a;
+  color: gray;
+  background-color: white;
+}
+.button:hover {
+  background-color: #c7eff0;
+  border-color: gray;
+}
+.button:disabled {
+  background-color: #c7eff0;
+  color: gray;
+}
+.cart-headers {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 130px;
+  border-bottom-style: double;
+  border-color: #005980;
+}
+.title-price {
+  display: flex;
+  padding: 20px;
+}
+.price {
+  margin-left: 250px;
+  padding-left: 20px;
+}
+.description {
+  max-width: 100px;
 }

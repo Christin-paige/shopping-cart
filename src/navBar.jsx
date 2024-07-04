@@ -1,5 +1,6 @@
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 import header from './images/header.png';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
@@ -7,32 +8,39 @@ import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
+import { CartContext } from './context/cart';
+import { useContext } from 'react';
 
 export default function NavBar() {
+
+    const { openCart, totalCartQuantity } = useContext(CartContext);
+
   return (
-    <Container className="nav-container">
+    <Navbar expand="lg" className="nav-container">
+    <Container>
       <Nav className="me-auto">
-        <div className="header">
+        
           <Image className="header" src={header} />
-        </div>
+       
 <div className="nav-links">
-        <Nav.Link to="/" as={NavLink}>
+        <Nav.Link to="/" as={NavLink} className="nav-link">
           Home
         </Nav.Link>
 
-        <Nav.Link to="/womens" as={NavLink}>
+        <Nav.Link to="/womens" as={NavLink}className="nav-link">
           Women
         </Nav.Link>
-        <Nav.Link to="/mens" as={NavLink}>
+        <Nav.Link to="/mens" as={NavLink}className="nav-link">
           Mens
         </Nav.Link>
-        <Nav.Link to="/jewelery" as={NavLink}>
+        <Nav.Link to="/jewelery" as={NavLink}className="nav-link">
           Jewelry
         </Nav.Link>
         </div>
       </Nav>
-      <Nav.Link to="/shoppingBag" className="shoppingBag">
-      <Button variant="outline-primary" className="rounded-circle">
+      <Nav.Link to="/cart" as={NavLink}className="nav-link">
+
+      <Button onClick={openCart} className="rounded-circle">
         <svg xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 902.86 902.86">
           <path
             d="M671.504,577.829l110.485-432.609H902.86v-68H729.174L703.128,179.2L0,178.697l74.753,399.129h596.751V577.829z
@@ -48,8 +56,10 @@ export default function NavBar() {
 			S619.162,694.432,619.162,716.897z"
           />
         </svg>
-        <div className="circle">3</div>
+        <div className="circle">{totalCartQuantity}
+        </div>
       </Button>
+
       </Nav.Link>
       <Form inline className="searchForm">
         <Row>
@@ -63,5 +73,6 @@ export default function NavBar() {
         </Row>
       </Form>
     </Container>
+    </Navbar>
   );
 }

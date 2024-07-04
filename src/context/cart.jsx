@@ -9,6 +9,14 @@ export const CartProvider = ({ children }) => {
       ? JSON.parse(localStorage.getItem('cartItems'))
       : []
   );
+  const [isOpen, setIsOpen] = useState(false);
+
+  const openCart = () => {
+    setIsOpen(true);
+  };
+  const closeCart = () => {
+    setIsOpen(false);
+  };
 
   const addToCart = (item) => {
     const isItemInCart = cartItems.find((cartItem) => cartItem.id === item.id);
@@ -50,6 +58,22 @@ export const CartProvider = ({ children }) => {
     setCartItems([]);
   };
 
+  //const cartQuantity = cartItems.reduce((quantity, item)=> item.quantity + quantity, 0)
+  const cartQuantity = (id, value) => {
+    setCartItems(
+      cartItems.map((cartItem) =>
+        cartItem.id === id
+          ? { ...cartItem, quantity: Math.max(cartItem.quantity + value, 0) }
+          : cartItem
+      )
+    );
+  };
+
+  const cartTotalQuantity = cartItems.reduce(
+    (quantity, item) => item.quantity + quantity,
+    0
+  );
+
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   }, [cartItems]);
@@ -68,6 +92,11 @@ export const CartProvider = ({ children }) => {
         addToCart,
         removeFromCart,
         clearCart,
+        cartQuantity,
+        openCart,
+        closeCart,
+        isOpen,
+        cartTotalQuantity,
       }}
     >
       {children}

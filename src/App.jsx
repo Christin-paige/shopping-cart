@@ -16,7 +16,6 @@ function App() {
     <>
     <CartProvider>
     <NavBar />
-    <Cart />
     <Container>
       <Routes>
         <Route path="/" element={<Home />} />
