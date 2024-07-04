@@ -16,9 +16,9 @@ export default function Content() {
           
           
          
-          <Image className="jewelery-image"
+         <Link to="jewelery"> <Image className="jewelery-image"
             src="https://images.pexels.com/photos/16567155/pexels-photo-16567155/free-photo-of-close-up-of-woman-wearing-a-white-top-and-jewelry.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-          />
+          /></Link>
          
 
          

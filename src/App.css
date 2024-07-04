@@ -1,25 +1,60 @@
 
 .hero {
-  width: 100%;
-  height: 50%;
+  width:100%;
+  height: auto;
+  
+ 
 }
 
 .header {
   margin-right: 50px;
   width: 200px;
   height: 200px;
+ 
 }
-.cart {
-  width: 30px;
-  margin-right: 30px;
-  margin-left: -50px;
+
+.nav-container {
+  display: flex;
+  justify-content:center;
+  align-items: center;
+ 
 }
-.dot{
-  height: 15px;
-  width: 15px;
-  background-color: red;
-  border-radius: 50%;
+
+.nav-links{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+
+.rounded-circle {
+  width: 3rem;
+  height: 3rem;
   position: relative;
+ margin-right: 20px;
+  
+}
+svg{
+  display: flex;
+  padding-right: 3px;
+}
+
+.circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  width: 1.5rem;
+  height: 1.5rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transform: translate(40%, 40%);
+  border-radius: 50%;
+
 }
 
 .shoppingBag{
@@ -57,17 +92,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  width: 100%;
  
 }
 
 .woman-image{
-  width: 400px;
+  width: 500px;
 }
 .jewelery-image{
   width: 300px;
 }
 .man-image{
-  width: 400px;
+  width: 500px;
 }
 .footer {
   display: flex;
@@ -108,4 +144,9 @@ h6 {
 .womens{
   text-decoration: none;
   color: black;
+}
+
+.shoppingBag{
+  display: flex;
+  flex-direction: column;
 }
