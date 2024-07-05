@@ -1,3 +1,45 @@
+# Shopping Cart Project
+
+This project is a simple e-commerce application built with React and Bootstrap. It allows users to browse a collection of items, add them to a shopping cart, and manage the cart contents. The cart data is persisted using the local storage of the browser.
+
+## Features
+
+- Browse items and view their details.
+- Add items to the shopping cart.
+- Increment and decrement item quantities in the cart.
+- Remove items from the cart.
+- Persist cart data using local storage.
+- Display total quantity of items in the cart in the navbar.
+- Display the Cart Summary with the total cost of the items.
+- Responsive design using Bootstrap.
+
+## Technologies Used
+
+- React
+- Bootstrap
+- React Bootstrap
+- JavaScript
+- CSS
+- Fake Store API
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js
+- npm (Node Package Manager)
+
+### Installation
+
+1. Clone the repository:
+
+   git clone https://github.com/Christin-paige/shopping-cart.git
+
+## API
+This project uses the Fake Store API to fetch item data.
+
+## Contributing
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or bug fixes.
 
 # React + Vite
 
