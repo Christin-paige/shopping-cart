@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import CartSummary from './cart-summary';
 //import Offcanvas from 'react-bootstrap/Offcanvas';
 
 export default function Cart() {
@@ -15,11 +16,11 @@ export default function Cart() {
     <Container className="shopping-cart">
     
    <Row md={1}>
-    <div className="cart-headers">
    <h2>Shopping Bag</h2>
-   <p>Item</p>
+    <div className="cart-headers">
+   <p className= "item-heading">Item</p>
    <p className="price-heading">Price</p>
-   <p>Quantity</p>
+   <p className="quantity-heading">Quantity</p>
    </div>
         {cartItems.map(
           (item) =>
@@ -35,11 +36,9 @@ export default function Cart() {
                <Col> ${item.price}</Col> 
                </div>
                </div>
-               <div className="quantity">
-                
+              
                  </div>
-                 </div>
-               <div className="buttons">
+               <div className="quantity-buttons">
                   <Button className="button" onClick={() => cartQuantity(item.id, -1)} disabled={item.quantity <= 1}>-</Button>
                   {item.quantity}
                   <Button className="button" onClick={() => cartQuantity(item.id, 1)}>+</Button>
@@ -56,8 +55,12 @@ export default function Cart() {
          <Button className="clear-cart" onClick={() => clearCart()}>clear cart</Button>
       </div>
       </Row>
+    
+      <CartSummary />
       </Container>
+      
    )
+  
 }
    /* const { closeCart, isOpen } = useContext(CartContext)
 

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 export default function Content() {
   return (
     <div>
-    <h1 className="topPicks">Top Picks</h1>
+    <h2 className="topPicks">Top Picks</h2>
     <Container>
     <div className="content-images"> 
          <Link to="womens"> <Image className="woman-image"
@@ -16,7 +16,7 @@ export default function Content() {
           
           
          
-         <Link to="jewelery"> <Image className="jewelery-image"
+         <Link to="jewelry"> <Image className="jewelry-image"
             src="https://images.pexels.com/photos/16567155/pexels-photo-16567155/free-photo-of-close-up-of-woman-wearing-a-white-top-and-jewelry.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           /></Link>
          

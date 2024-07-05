@@ -1,3 +1,7 @@
+body {
+  height: 100%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
 .hero {
   width: 100%;
   height: auto;
@@ -25,6 +29,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: larger;
 }
 .nav-link {
   color: #0076a4;
@@ -38,6 +43,10 @@
   height: 3rem;
   position: relative;
   margin-right: 20px;
+  background-color: #fac495;
+}
+.rounded-circle:hover {
+  background-color: #e6ad81;
 }
 svg {
   display: flex;
@@ -58,13 +67,15 @@ svg {
   transform: translate(40%, 40%);
   border-radius: 50%;
 }
-.rounded-circle {
-  background-color: #fac495;
+.card-container{
+  padding-left: 0;
 }
-.rounded-circle:hover {
-  background-color: #e6ad81;
+.card-body{
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  
 }
-
 .cart-container {
   display: flex;
 }
@@ -95,14 +106,15 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width:100%;
+  margin-bottom: 40px;
 }
 
 .woman-image {
   width: 500px;
 }
-.jewelery-image {
-  width: 300px;
+.jewelry-image {
+  width: 100%;
 }
 .man-image {
   width: 500px;
@@ -112,22 +124,13 @@ svg {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-left: 200px;
-
   border-top: double;
-  margin: 20px 200px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  padding: 20px;
   color: #59708a;
+  font-size: larger;
 }
 
-h6 {
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
-  color: #59708a;
-  margin-left: 50px;
-  padding: 20px;
-}
+
 
 .shirts {
   display: flex;
@@ -135,24 +138,72 @@ h6 {
   justify-content: space-around;
 }
 h2 {
-  font-family: fantasy;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family:fantasy;
+  padding-top: 20px;
 }
 .womens {
   text-decoration: none;
   color: black;
 }
 
-.clear-cart-button {
-  display: flex;
+.cart-headers {
+  display: grid;
+  margin-bottom: 20px;
+  grid-column-gap: 20px;
+  grid-template-areas: ". item-title item-title-attributes";
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-rows: auto;
+  padding: 20px 0 10px;
+  border-bottom-style: double;
+  border-color: #005980;
+ 
 }
-.grid-items {
-  display: flex;
-  justify-content: space-between;
+.item-heading{
+  margin-left: 100px;
+}
+.price-heading{
+  margin-right: 150px;
+}
+.quantity-heading{
+  margin-right: 130px;
 }
 
-.cart-item {
-  width: 200px;
-  padding: 20px;
+.clear-cart {
+  margin: 10px;
+  border-color: #59708a;
+  color: gray;
+  background-color: white;
+  
+}
+
+.clear-cart:hover{
+  background-color: #c7eff0;
+  border-color: gray;
+}
+.grid-items {
+  display: grid;
+  position: relative;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 3fr);
+  vertical-align: initial;
+  
+  
+}
+.cart-item{
+  width: 100px;
+  float: right;
+  padding-top: 50px;
+  padding-bottom: 20px;
+
+}
+.description{
+ margin-left: 150px;
+ font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ font-size: smaller;
+ 
+  
 }
 
 .buttons {
@@ -173,13 +224,7 @@ h2 {
   background-color: #c7eff0;
   color: gray;
 }
-.cart-headers {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 130px;
-  border-bottom-style: double;
-  border-color: #005980;
-}
+
 .title-price {
   display: flex;
   padding: 20px;
@@ -190,4 +235,15 @@ h2 {
 }
 .description {
   max-width: 100px;
+}
+.quantity-buttons {
+  margin-left:200px;
+  margin-top: 40px;
+}
+
+.summary {
+  border-style: double;
+  width: 70%;
+  height: 50%;
+  margin-left: 50px;
 }

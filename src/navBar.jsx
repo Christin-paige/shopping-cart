@@ -13,7 +13,7 @@ import { useContext } from 'react';
 
 export default function NavBar() {
 
-    const { openCart, totalCartQuantity } = useContext(CartContext);
+    const { openCart, cartTotalQuantity } = useContext(CartContext);
 
   return (
     <Navbar expand="lg" className="nav-container">
@@ -33,7 +33,7 @@ export default function NavBar() {
         <Nav.Link to="/mens" as={NavLink}className="nav-link">
           Mens
         </Nav.Link>
-        <Nav.Link to="/jewelery" as={NavLink}className="nav-link">
+        <Nav.Link to="/jewelry" as={NavLink}className="nav-link">
           Jewelry
         </Nav.Link>
         </div>
@@ -56,7 +56,7 @@ export default function NavBar() {
 			S619.162,694.432,619.162,716.897z"
           />
         </svg>
-        <div className="circle">{totalCartQuantity}
+        <div className="circle">{cartTotalQuantity}
         </div>
       </Button>
 

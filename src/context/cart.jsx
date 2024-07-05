@@ -74,6 +74,11 @@ export const CartProvider = ({ children }) => {
     0
   );
 
+  const cartTotalPrice = cartItems.reduce(
+    (price, item) => item.price * item.quantity + price, 0
+    
+  );
+
   useEffect(() => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   }, [cartItems]);
@@ -97,6 +102,7 @@ export const CartProvider = ({ children }) => {
         closeCart,
         isOpen,
         cartTotalQuantity,
+        cartTotalPrice,
       }}
     >
       {children}

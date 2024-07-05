@@ -1,8 +1,12 @@
 import { useEffect, useState, useContext } from 'react';
 import { CartContext } from '../context/cart';
-import Button from 'react-bootstrap/Button'
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
-function Mens() {
+export default function Mens() {
   const [items, setItems] = useState([]);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -35,28 +39,33 @@ function Mens() {
   if (error) return <p>a network error was encountered</p>;
 
   return (
-    <>
-   <div className="conent-container">
-      <h2 className="shirt-collection">Mens Collection</h2>
-      <div className="container">
-        {items.map(
-          (item) =>
-            item && (
-              <div className="shirts" key={item.id}>
-                <img src={item.image} alt={item.title} className="item" />
-                <div className="description">
-                  <p>{item.title}</p>
-                  <p>${item.price}</p>
-                  <hr />
-                  <Button onClick={() => addToCart(item)}>add to bag</Button>
-                </div>
-              </div>
-            )
-        )}
-      </div>
-      </div>
-    </>
+    <div>
+      <h2>Mens Collection</h2>
+      <Container className="card-container">
+        <Row>
+              {items.map(
+                (item) =>
+                  item && (
+                    <Col key={item.id} sm={12} md={6} lg={4}>
+                      <Card className="card-body" style={{width: '18rem' }}>
+                      <Card.Img variant="top" src={item.image} alt={item.title} />
+                      <Card.Body>
+                      <Card.Title className="text-center">{item.title}</Card.Title>
+                      <Card.Text className="text-center">${item.price}</Card.Text>
+                      <Button onClick={() => addToCart(item)}>
+                        add to bag
+                      </Button>
+                      </Card.Body>
+                      </Card>
+                      </Col>
+                  )
+              )}
+           
+         
+        </Row>
+      </Container>
+    </div>
   );
 }
 
-export default Mens
+
