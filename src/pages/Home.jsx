@@ -1,10 +1,11 @@
-import Hero from '../hero';
+
 import Content from '../content';
+import Hero from '../hero';
 
 function Home() {
   return (
     <div>
-      <Hero />
+     <Hero />
       <Content />
      
     </div>

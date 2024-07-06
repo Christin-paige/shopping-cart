@@ -4,7 +4,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import header from './images/header.png';
 import Form from 'react-bootstrap/Form';
 import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Image from 'react-bootstrap/Image';
 import { NavLink } from 'react-router-dom';
 import Button from 'react-bootstrap/Button';
@@ -63,13 +62,7 @@ export default function NavBar() {
       </Nav.Link>
       <Form inline className="searchForm">
         <Row>
-          <Col xs="auto">
-            <Form.Control
-              type="text"
-              placeholder="Search"
-              className="d-inline"
-            />
-          </Col>
+        
         </Row>
       </Form>
     </Container>

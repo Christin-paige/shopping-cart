@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom'
 
 export default function Content() {
   return (
-    <div>
+    <div className="top-picks-container">
     <h2 className="topPicks">Top Picks</h2>
     <Container>
     <div className="content-images"> 

@@ -20,7 +20,7 @@ This project is a simple e-commerce application built with React and Bootstrap. 
 - React Bootstrap
 - JavaScript
 - CSS
-- Fake Store API
+- FakeStore API
 
 ## Getting Started
 
