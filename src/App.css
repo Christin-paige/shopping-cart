@@ -131,17 +131,11 @@ svg {
 }
 
 
-
-.shirts {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-}
 h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family:fantasy;
+  
   padding-top: 20px;
 }
 .womens {
@@ -150,26 +144,13 @@ h2 {
 }
 
 .cart-headers {
-  display: grid;
-  margin-bottom: 20px;
-  grid-column-gap: 20px;
-  grid-template-areas: ". item-title item-title-attributes";
-  grid-template-columns: minmax(0, 1fr);
-  grid-template-rows: auto;
-  padding: 20px 0 10px;
-  border-bottom-style: double;
-  border-color: #005980;
- 
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding-top: 20px;
+  border-bottom-style: inset;
 }
-.item-heading{
-  margin-left: 100px;
-}
-.price-heading{
-  margin-right: 150px;
-}
-.quantity-heading{
-  margin-right: 130px;
-}
+
 
 .clear-cart {
   margin: 10px;
@@ -184,11 +165,16 @@ h2 {
   border-color: gray;
 }
 .grid-items {
-  display: grid;
-  position: relative;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 3fr);
-  vertical-align: initial;
-  
+  display: flex;
+  justify-content:space-around;
+  margin:0;
+  padding-right:70px;
+}
+.price-heading{
+  padding-left: 90px;
+}
+.quantity-heading{
+  padding-right: 30px;
   
 }
 .cart-item{
@@ -205,7 +191,16 @@ h2 {
  
   
 }
-
+.bag-button{
+  margin: 10px;
+  border-color: #59708a;
+  color: gray;
+  background-color: white;
+}
+.bag-button:hover{
+  background-color: #c7eff0;
+  border-color: gray;
+}
 .buttons {
   padding-top: 100px;
 }
@@ -230,7 +225,7 @@ h2 {
   padding: 20px;
 }
 .price {
-  margin-left: 250px;
+  margin-left: 200px;
   padding-left: 20px;
 }
 .description {
@@ -239,11 +234,15 @@ h2 {
 .quantity-buttons {
   margin-left:200px;
   margin-top: 40px;
+  
 }
-
+.item-total{
+  width: 100px;
+}
 .summary {
   border-style: double;
-  width: 70%;
-  height: 50%;
+  width: 50%;
+  height: 80%;
   margin-left: 50px;
+  padding: 20px;
 }

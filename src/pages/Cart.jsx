@@ -5,6 +5,8 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import CartSummary from './cart-summary';
+import Image from 'react-bootstrap/Image';
+import Trash from '../images/trash3.svg';
 //import Offcanvas from 'react-bootstrap/Offcanvas';
 
 export default function Cart() {
@@ -34,16 +36,24 @@ export default function Cart() {
                 </div>
                 <div className="price">
                <Col> ${item.price}</Col> 
+               <div className="item-total">
+               <Col><p>Item total: ${item.price * item.quantity}</p></Col>
+               </div>
                </div>
                </div>
               
                  </div>
                <div className="quantity-buttons">
-                  <Button className="button" onClick={() => cartQuantity(item.id, -1)} disabled={item.quantity <= 1}>-</Button>
+                <Button className="button" onClick={() => cartQuantity(item.id, -1)} disabled={item.quantity <= 1}>-</Button>
                   {item.quantity}
                   <Button className="button" onClick={() => cartQuantity(item.id, 1)}>+</Button>
-                  <Button className="button" onClick={() => removeFromCart(item)}>remove</Button>
+                  <Image className="button" src = {Trash} onClick={() => removeFromCart(item)}/> 
+                
+               
                   </div>
+                 
+                    
+                
                 </div>
                
               

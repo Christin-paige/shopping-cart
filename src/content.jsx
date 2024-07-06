@@ -2,6 +2,7 @@
 import Container from 'react-bootstrap/Container';
 import Image from 'react-bootstrap/Image';
 
+
 import { Link } from 'react-router-dom'
 
 export default function Content() {

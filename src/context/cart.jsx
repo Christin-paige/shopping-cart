@@ -74,6 +74,8 @@ export const CartProvider = ({ children }) => {
     0
   );
 
+
+
   const cartTotalPrice = cartItems.reduce(
     (price, item) => item.price * item.quantity + price, 0
     
@@ -103,6 +105,7 @@ export const CartProvider = ({ children }) => {
         isOpen,
         cartTotalQuantity,
         cartTotalPrice,
+       
       }}
     >
       {children}

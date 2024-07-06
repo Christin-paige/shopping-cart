@@ -55,7 +55,7 @@ export default function Womens() {
                       <Card.Body>
                       <Card.Title className="text-center">{item.title}</Card.Title>
                       <Card.Text className="text-center">${item.price}</Card.Text>
-                      <Button onClick={() => addToCart(item)}>
+                      <Button className="bag-button"  onClick={() => addToCart(item)}>
                         add to bag
                       </Button>
                       </Card.Body>
